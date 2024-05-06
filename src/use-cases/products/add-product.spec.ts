@@ -8,10 +8,9 @@ describe("Create product", () => {
     await addProduct(
       { products: productService },
       {
-        id: "123",
         name: "product",
         description: "Description Product",
-        starts: 5,
+        starts: 3,
       }
     );
     expect(productService.products.length).toBe(1);

@@ -4,7 +4,6 @@ export interface AddProductDependecies {
   products: ProductService;
 }
 export interface AddProductRequestModel {
-  id: string;
   name: string;
   description: string;
   starts: number;
@@ -16,5 +15,6 @@ export async function addProduct(
 ) {
   await products.save({
     ...payload,
+    id: "123",
   });
 }
