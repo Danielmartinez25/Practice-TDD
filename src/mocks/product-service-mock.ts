@@ -1,4 +1,4 @@
-import { Product } from "../../entities/product";
+import { Product } from "../entities/product";
 import { ProductService } from "../services/product-service";
 import { ms } from "../utils/time/ms";
 

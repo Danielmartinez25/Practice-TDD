@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { addProduct } from "./add-product";
-import { mockProductService } from "../mocks/product-service-mock";
+import { mockProductService } from "../../mocks/product-service-mock";
 
 describe("Create product", () => {
   test("with the correct data create the product", async () => {

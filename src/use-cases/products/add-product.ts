@@ -1,4 +1,4 @@
-import { ProductService } from "../services/product-service";
+import { ProductService } from "../../services/product-service";
 
 export interface AddProductDependecies {
   products: ProductService;
