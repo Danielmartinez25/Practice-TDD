@@ -1,7 +1,9 @@
+import { CryptoService } from "../../services/crypto-service";
 import { ProductService } from "../../services/product-service";
 
 export interface AddProductDependecies {
   products: ProductService;
+  crypto: CryptoService;
 }
 export interface AddProductRequestModel {
   name: string;
@@ -10,11 +12,12 @@ export interface AddProductRequestModel {
 }
 
 export async function addProduct(
-  { products }: AddProductDependecies,
+  { products, crypto }: AddProductDependecies,
   payload: AddProductRequestModel
 ) {
+  const id = crypto.generateUUID();
   await products.save({
     ...payload,
-    id: "123",
+    id,
   });
 }
