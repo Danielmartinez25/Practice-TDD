@@ -19,5 +19,9 @@ export function mockProductService(
       ms(100);
       return this.products;
     },
+    async delete(id: string) {
+      ms(100);
+      this.products = this.products.filter((product) => product.id === id);
+    },
   };
 }
