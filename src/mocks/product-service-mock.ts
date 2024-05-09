@@ -15,5 +15,9 @@ export function mockProductService(
       ms(100);
       this.products.push(product);
     },
+    async getAll() {
+      ms(100);
+      return this.products;
+    },
   };
 }
